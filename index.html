@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Profile card component</title>
+  <link rel="stylesheet"href="style.css">
+
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      transform:translateY(100%);
+      transition: .4s;
+      padding: 20px;
+      background-color: white;
+      text-align: center;
+        }
+        .attribution:hover{
+          transform: translateY(0);
+        }
+    .attribution ::before {
+      content: '';
+      
+      width: 100%;
+      height: 50px;
+      bottom: 100%;
+      left: 0;
+      z-index: -10;
+        }
+    :root{
+      font-size: 18px;
+    }
+    *{
+      margin:0;
+      padding: 0;
+      box-sizing: border-box;
+      
+    }
+    body{
+      font-family: 'kumbh sans', sans-serif;
+      color: hsl(0,11%,12%);
+      
+    }
+    section {
+      background: hsl(185, 75%, 39%);
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+      position: relative;
+    }
+    .card{
+      width: 350px;
+      border-radius: 20px;
+      text-align: center;
+      background: white;
+      overflow: hidden;
+      position: relative;
+      height: 380px;
+      /* box-shadow: 0 20px 20px grey;
+       */
+
+    }
+    .card-top{
+      background-image: url("images/bg-pattern-card.svg");
+      background-size: cover;
+      height: 150px;
+      width: 100%;
+      border-radius: 20px 20px 0 0;
+    }
+    .card-body{
+      padding: 0 20px 20px;
+      
+    }
+    .image{
+      width:110px ;
+      height: 110px;
+      border-radius: 50%;
+      border: 5px solid white;
+      overflow: hidden;
+     margin: -80px auto 5px auto; 
+
+      
+    }
+    .image img{
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 50px;
+    }
+    
+    .age, .city,.meta{
+      font-weight: 400;
+      color: hsl(0,11%,12%);
+      opacity: .5;
+    }
+    .profile{
+      display: flex;
+      flex-direction: column;
+      justify-content:center;
+      align-items: center;
+      margin-top: 25px;
+      
+    }
+    .name-age{
+      font-size: 1.1rem;
+      margin-top: 2px;
+      
+    }
+    .age{
+      font-weight: 400;
+      margin-left: 6px;
+    }
+    .city{
+      font-size: .8rem;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      
+    }
+    .card-bottom{
+      border-top: 1px solid #969696c2;
+      display: flex;
+      padding: 0 30px;
+      justify-content:space-around;
+      margin-top: 5px;
+      height: 90px;
+      align-items: center;
+      
+      
+    }
+    .card-bottom .item{
+      flex: 1;
+      height: 100px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin: 10px;
+    }
+    .card-bottom .item .value{
+      font-size: 1.1rem;
+      margin-bottom: 6px;
+    }
+    .card-bottom .item .meta{
+      font-size: .6rem;
+      letter-spacing: 1px;
+      
+    }
+    .circle .top,.circle .bottom{
+      position: absolute;
+      
+      /* background: hsl(185, 75%, 39%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-repeat: no-repeat;
+       */
+       height: 130vh;
+
+    }
+    .circle .top{
+      top: -300px;
+      left: -175px;
+      transform: translate(-100px, -50px);
+    }
+    .circle .bottom{
+       bottom: -300px; 
+      right: -175px;
+       transform: translate(100px, 50px);
+       
+      
+    }
+    @media screen and (max-width:617px)   {
+       .top{
+        transform: translate(-70px,-55px);
+      }
+      .bottom{
+        transform: translate(70px,55px);
+      }
+      
+    } 
+    
+    /* @media screen and(max-height:700px)   {
+      .bottom{
+        transform: translate(70px,75px);
+      }
+      
+    } */
+
+    
+
+
+
+
+
+
+
+
+
+  </style>
+</head>
+<body>
+  <section class="main">
+    <div class="circle">
+      <img class="top" src="images/bg-pattern-top.svg" alt="top-image">
+      <img class="bottom" src="images/bg-pattern-bottom.svg" alt="bottom-image">
+    </div>
+    <div class="card">
+      <div class="card-top"></div>
+      <div class="card-body"></div>
+      <div class="image">
+        <img src="images/image-victor.jpg" alt="image-victor">
+      </div>
+      <div class="profile">
+      <h1 class="name-age">
+        Victor Crest 
+        <span class="age">26</span>
+      </h1>
+      
+      <h2 class="city">London</h2>
+      </div>
+
+      <div class="card-bottom">
+        <div class="items">
+          <h3 class="value">80k</h3>
+          <h4 class="meta">Followers</h4>
+        </div>
+        <div class="items">
+          <h3 class="value">803k</h3>
+          <h4 class="meta">Likes</h4>
+        </div>
+        <div class="items">
+          <h3 class="value">1.4k</h3>
+          <h4 class="meta">Photos</h4>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Suchi Pragya</a>.
+  </div>
+</body>
+</html>
